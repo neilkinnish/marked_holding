@@ -9,12 +9,23 @@
     html,
     body {
       height: 100%;
+      width: 100%;
     }
 
     body {
       background-color: rgba(0, 0, 0, 0.05);
       padding: 0;
       margin: 0;
+    }
+
+    .display {
+      padding: 20px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      height: 100%;
     }
 
     .wrapper {
@@ -25,6 +36,8 @@
       justify-content: center;
 
       height: 100%;
+
+      display: none;
     }
 
     svg {
@@ -33,8 +46,6 @@
       height: auto;
 
       margin: 0;
-
-      display: none;
 
       padding: 5%;
     }
@@ -142,8 +153,9 @@
 </head>
 
 <body>
+  <span class="info">Random. Click or Refresh.</span>
+  <div class="display"></div>
   <div class="wrapper">
-    <span class="info">Random. Click or Refresh.</span>
     <svg class="svg1" viewBox="0 0 140 42" xmlns="http://www.w3.org/2000/svg">
       <defs>
         <linearGradient id="logo" x1="50%" y1="0%" x2="0%" y2="100%">
@@ -640,14 +652,16 @@
   function get() {
     var number = Math.floor((Math.random() * 10) + 1);
     var svg = document.querySelector('.svg' + number);
-    svg.style.display = 'inline-block';
-
+    var cloned = svg.cloneNode(true);
+    cloned.style.display = 'inline-block';
+    document.querySelector('.display').innerHTML = '';
+    document.querySelector('.display').appendChild(cloned);
   }
   function reload() {
     window.location.reload();
   }
   document.body.addEventListener('click', reload, false);
-  document.body.addEventListener("touchstart", reload, false);
+  document.body.addEventListener('touchstart', reload, false);
   get();
 
 </script>
