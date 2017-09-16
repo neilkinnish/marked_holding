@@ -7,6 +7,12 @@
   <style>
     body {
       background-color: rgba(0,0,0,0.05);
+      text-align: center;
+    }
+    
+    .wrapper {
+      max-width: 450px;
+      display: inline-block;
     }
 
     svg{
@@ -46,7 +52,6 @@
       transform-origin: 50% 100%;
       transform: scale(0);
     }
-
 
     @keyframes shrink {
       0%   {transform: scaleX(1) scaleY(1) translateY(0)}
@@ -88,6 +93,7 @@
   </style>
 </head>
 <body>
+  <div class="wrapper">
   <div class="container">
    <svg class="header" viewBox="0 0 140 42" xmlns="http://www.w3.org/2000/svg">
     <defs>
@@ -242,7 +248,6 @@
       </g>
     </g>
   </svg>
-  
   <svg class="three" viewBox="0 0 37 42" xmlns="http://www.w3.org/2000/svg">
     <defs>
       <linearGradient id="logo3" x1="50%" y1="0%" x2="0%" y2="100%" >
@@ -595,5 +600,6 @@
       </g>
     </g>
   </svg>
+  </div>
 </body>
 </html>
