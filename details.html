@@ -143,7 +143,7 @@
 
 <body>
   <div class="wrapper">
-    <span class="info">Refresh for more!</span>
+    <span class="info">Random. Click or Refresh.</span>
     <svg class="svg1" viewBox="0 0 140 42" xmlns="http://www.w3.org/2000/svg">
       <defs>
         <linearGradient id="logo" x1="50%" y1="0%" x2="0%" y2="100%">
@@ -637,9 +637,17 @@
   </div>
 </body>
 <script>
-  var number = Math.floor((Math.random() * 10) + 1);
-  document.querySelector('.svg' + number).style.display = 'inline-block';
-  // console.log(document.querySelector('.svg' + number));
+  function get() {
+    var number = Math.floor((Math.random() * 10) + 1);
+    var svg = document.querySelector('.svg' + number);
+    svg.style.display = 'inline-block';
+
+  }
+  function reload() {
+    window.location.reload();
+  }
+  document.body.addEventListener('click', reload, false);
+  get();
 
 </script>
 
