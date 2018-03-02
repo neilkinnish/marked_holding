@@ -22,10 +22,48 @@
         justify-content: center;
         flex-direction: column;
       }
+      svg {
+        position: absolute;
+        top: 1em;
+        left: 1em;
+        width: 42px;
+      }
     </style>
   </head>
   <body>
     <div class="content">
+       <svg viewBox="0 0 300 340" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="marked-logo-grad" x1="50%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stop-color="#FDDA51">
+              <animate
+                attributeName="stop-color"
+                values="#FDDA51; #FF53CF; #FDDA51"
+                dur="10s"
+                repeatCount="indefinite"
+              />
+            </stop>
+            <stop offset="100%" stop-color="#FF53CF">
+              <animate
+                attributeName="stop-color"
+                values="#FF53CF; #FDDA51; #FF53CF"
+                dur="10s"
+                repeatCount="indefinite"
+              />
+            </stop>
+          </linearGradient>
+        </defs>
+        <g fill="url('#marked-logo-grad')" fill-rule="evenodd">
+          <path d="M51.435 260.838C19.915 233.574 0 193.455 0 148.725 0 66.587 67.157 0 150 0s150 66.587 150 148.725c0 20.06-4.005 39.192-11.267 56.653C265.838 271.991 161.474 340 129.833 340a6.36 6.36 0 0 1-5.333-2.93 6.198 6.198 0 0 1-.36-6.019l6.34-12.783a15.3 15.3 0 0 0-.135-13.628c-2.177-4.277-6.531-6.935-10.994-8.233-29.765-8.656-50.933-20.372-67.916-35.57z" />
+        </g>
+        <g fill="#FFF">
+          <path d="M83.449 163.024c0 5.338-2.869 10.272-7.525 12.941a15.142 15.142 0 0 1-15.05 0c-4.657-2.67-7.525-7.603-7.525-12.941v-20.011c0-8.254 6.738-14.944 15.05-14.944 8.312 0 15.05 6.69 15.05 14.944v20.01z" />
+          <path d="M124.659 194.964c0 8.253-6.739 14.944-15.05 14.944-8.312 0-15.05-6.69-15.05-14.944v-84.02c0-5.339 2.868-10.272 7.525-12.942a15.142 15.142 0 0 1 15.05 0c4.656 2.67 7.525 7.603 7.525 12.942v84.02z" />
+          <path d="M165.868 164.435c0 8.253-6.738 14.944-15.05 14.944-8.312 0-15.05-6.691-15.05-14.944v-34.763c0-8.253 6.738-14.944 15.05-14.944 8.312 0 15.05 6.69 15.05 14.944v34.763z" />
+          <path d="M207.078 194.964c0 8.253-6.738 14.944-15.05 14.944-8.312 0-15.05-6.69-15.05-14.944v-84.02c0-8.253 6.738-14.944 15.05-14.944 8.312 0 15.05 6.69 15.05 14.944v84.02z" />
+          <path d="M248.288 163.024c0 8.253-6.738 14.943-15.05 14.943-8.312 0-15.05-6.69-15.05-14.943v-20.011c0-8.254 6.738-14.944 15.05-14.944 8.312 0 15.05 6.69 15.05 14.944v20.01z" />
+        </g>
+      </svg>
       <div>We're building a little thing to make the most out of your conversations.</div>
       <div>Follow <a href="https://twitter.com/markedio">@markedio</a> for updates.</div>
     </div>
